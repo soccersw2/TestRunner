@@ -10,7 +10,10 @@
 using namespace std;
 
 //string const FILES_PATH = "D:\\School_Fall_2018\\Senior Design\\SN0074_081418\\0a118c\\";
-string const FILES_PATH = "C:\\Users\\Eleven\\CLionProjects\\untitled1\\";
+//string const FILES_PATH = "C:\\Users\\Eleven\\CLionProjects\\untitled1\\";
+
+string const FILES_PATH = "C:\\Users\\Jonathan\\CLionProjects\\TestRunner\\SN0074_081418\\0a118c\\";
+//string const FILES_PATH = "C:\\Users\\Jonathan\\CLionProjects\\TestRunner\\testFiles2\\";
 string const FILE_PATH= "C:\\Users\\Eleven\\CLionProjects\\untitled1\\x_label203_test.txt";
 
 vector<LabelDataFile> labelDataFileVector;
@@ -48,7 +51,7 @@ int main() {
     //cout << bitset<32>(dataFromFile.front().getMessage()) << endl;
     cout << "Parsing files...";
     labelDataFileVector = parser->parseAllFiles(FILES_PATH);
-    sendMessages();
+    //sendMessages();
     return 0;
 }
 

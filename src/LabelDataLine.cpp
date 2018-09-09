@@ -36,7 +36,7 @@ float LabelDataLine::getTime() {
     return this->time;
 }
 
-int LabelDataLine::getMessage() {
+long int LabelDataLine::getMessage() {
     return this->message;
 }
 
@@ -79,14 +79,14 @@ void LabelDataLine::setUnits(string units) {
     this->units = units;
 }
 
-int LabelDataLine::computeMessage() {
-    int message = this->hex;
+long int LabelDataLine::computeMessage() {
+    long int message = this->hex;
     message = message << 8;
-//    message = message || this->lbl;
-//    if (parityEven(message)){
-//        cout << "Parity Even";
-//        message = message || 0x80000000;
-//    }
+    message = message | this->lbl;
+    if (parityEven(message)){
+        cout << "Parity Even" << endl;
+        message = message | 2147483648; //0x80000000 bit mask;
+    } else cout << "Parity Odd" << endl;
 
     //cout << "Computed Message: " << dec << message << endl;
     this->message = message;

@@ -104,7 +104,7 @@ LabelDataLine Parser::recordData(vector<string> dataVector) {
     }
 
     labelDataLine->computeMessage();
-    //labelDataLine->printValues();
+    labelDataLine->printValues();
 
     return *labelDataLine;
 }
