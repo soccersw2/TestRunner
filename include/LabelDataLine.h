@@ -19,7 +19,7 @@ private:
     string translation;
     float value;
     string units;
-    long int message;
+    uint32_t message;
 
 public:
     LabelDataLine(float time, int rx, int lbl, int hex,
@@ -33,12 +33,12 @@ public:
     void setTranslation(string translation);
     void setValue(float value);
     void setUnits(string units);
-    long int computeMessage();
+    uint32_t computeMessage();
     bool parityEven(int message);
 
     void printValues();
     float getTime();
-    long int getMessage();
+    uint32_t getMessage();
 };
 
 

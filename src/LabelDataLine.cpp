@@ -36,7 +36,7 @@ float LabelDataLine::getTime() {
     return this->time;
 }
 
-long int LabelDataLine::getMessage() {
+uint32_t LabelDataLine::getMessage() {
     return this->message;
 }
 
@@ -79,8 +79,8 @@ void LabelDataLine::setUnits(string units) {
     this->units = units;
 }
 
-long int LabelDataLine::computeMessage() {
-    long int message = this->hex;
+uint32_t LabelDataLine::computeMessage() {
+    uint32_t message = this->hex;
     message = message << 8;
     message = message | this->lbl;
     if (parityEven(message)){
